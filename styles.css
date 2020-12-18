@@ -1,1 +1,86 @@
-/*Maak hier jouw CSS!*/
+.container{
+    background-color: hsl(339, 48%, 80%);
+
+    row-gap: 16px;
+    column-gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 50px auto 50px 50px 50px 50px;
+    grid-template-areas: "a "
+    "b"
+    "c"
+    "d"
+    "e"
+    "f"
+}
+
+
+
+
+
+
+.item{
+    background-color: hsl(358, 67%, 54%);
+    border: 2px solid   hsl(289, 13%, 32%);
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#item-a{
+    grid-area: a;
+
+
+}
+
+#item-b{
+    grid-area: b;
+
+
+}
+
+#item-c{
+    grid-area: c;
+
+
+}
+
+#item-d{
+
+    grid-area: d;
+}
+
+#item-e{
+
+    grid-area: e;
+}
+
+
+#item-f{
+
+    grid-area: f;
+}
+
+/*styling hier wordt toegepast op mobiel en groter *!*/
+
+@media screen and (min-width:576px) {
+    .container{
+        background-color: hsl(339, 48%, 80%);
+        padding: 15px;
+        row-gap: 16px;
+        column-gap: 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
+                "a c c "
+                "b c c"
+                "b e d"
+                "b e ."
+                "f f f";
+    }
+}
+
